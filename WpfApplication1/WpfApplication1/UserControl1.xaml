@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="WpfApplication1.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApplication1"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="100">
+
+    <Grid Background="White" Height="30" x:Name="HoleItem" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column=" 2" x:Name="CheckBox" Background="Transparent">
+
+             <Rectangle Width="20" Height="20" Stroke="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,5,5,5"/>
+            
+            <Canvas >
+                <Rectangle Width="7" Height="3" Fill="Green" Canvas.Left="12" Canvas.Top="-16" x:Name="CheckMark"  >
+                    <Rectangle.RenderTransform >
+                        <RotateTransform Angle="45"></RotateTransform>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle Width="9" Height="3" Fill="Green" Canvas.Left="13" Canvas.Top="-11" x:Name="CheckMark2" >
+                    <Rectangle.RenderTransform>
+                        <RotateTransform Angle="-45"></RotateTransform>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Button Background="Black"   Click="Button_Click" Canvas.Left="3" Canvas.Top="-23" Opacity="0" >WD</Button>
+
+            </Canvas>
+           
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" Background="Gray">
+            <TextBox Background="Gray" Foreground="White" Height="30"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Column="0" x:Name="Colorchoose">
+            <Button Height="30" Click="Button_Click_1" x:Name="colorful"></Button>
+        </StackPanel>
+    </Grid>
+
+
+</UserControl>
